@@ -40,8 +40,7 @@ object Configuration {
 
 case class Configuration(
   @JsonProperty("endpoints") endpoints: Set[HealthCheckEndpoint],
-  @JsonProperty("reporters") reporters: Map[String, ReporterConfig],
-  @JsonProperty("akka") akkaConfig: Map[String, _ <: AnyRef]
+  @JsonProperty("reporters") reporters: Map[String, ReporterConfig]
 )
 
 case class HealthCheckEndpoint(
